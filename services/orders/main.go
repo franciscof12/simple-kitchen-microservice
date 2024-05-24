@@ -9,6 +9,7 @@ const (
 func main() {
 	httpServer := NewHttpServer(":8000")
 	go httpServer.Run()
+
 	grpcServer := NewGRPCServer(addr)
 	err := grpcServer.Run()
 	if err != nil {
